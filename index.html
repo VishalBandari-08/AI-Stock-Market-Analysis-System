@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#111315" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="desktop.css" />
+  <link rel="stylesheet" href="explore.css" />
+  <link rel="stylesheet" href="interactions.css" />
+  <title>AI MarketLens</title>
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand-mark"><span>✦</span><strong>AI MarketLens</strong></div>
+    <span class="sidebar-label">WORKSPACE</span>
+    <nav class="side-nav">
+      <button class="selected" data-target="top"><span>⌂</span>Overview</button>
+      <button data-target="explore"><span>⌁</span>Markets</button>
+      <button data-target="stocks"><span>☆</span>Watchlist</button>
+      <button data-target="explore"><span>◒</span>Portfolio</button>
+      <button data-target="explore"><span>✦</span>AI assistant</button>
+    </nav>
+    <div class="sidebar-foot"><span>DEMO WORKSPACE</span><small>Analysis for learning and decision support</small></div>
+  </aside>
+  <main class="phone-shell">
+    <header class="topbar"><div><span class="eyebrow">AI MARKETLENS</span><h1>Good morning,<br><strong>investor</strong></h1></div><button class="icon-button" id="themeButton" aria-label="Toggle theme">◐</button></header>
+    <section class="demo-strip">✦ DEMO DATA <span>Last updated just now</span></section>
+    <section class="section-heading"><div><span class="eyebrow">MARKET OVERVIEW</span><h2>Read the market clearly.</h2></div><button class="text-button" data-target="explore">View all</button></section>
+    <div class="indices" id="indices"><div class="loading">Loading markets...</div></div>
+    <section class="pulse"><div class="pulse-title">✦ AI MARKET PULSE <span>81% confidence</span></div><h2>Moderately bullish</h2><div class="pulse-stats"><div><small>RISK</small><b>Medium</b></div><div><small>MOMENTUM</small><b>Positive</b></div></div><button class="outline-button">Explain market <span>↗</span></button></section>
+    <section class="section-heading stock-heading"><div><span class="eyebrow">PERSONAL SIGNALS</span><h2>Stocks to understand</h2></div></section>
+    <div class="search-box"><span>⌕</span><input id="stock-search" type="search" placeholder="Search a company or ticker" aria-label="Search stocks"></div><div id="stocks" class="stock-list"><div class="loading">Loading signals...</div></div>
+    <section id="explore" class="explore-section"><div class="section-heading"><div><span class="eyebrow">EXPLORE INTELLIGENCE</span><h2>More than a price chart.</h2></div></div><div class="module-grid"><button class="module-card" data-message="News sentiment is currently positive for your watchlist."><span>◌</span><strong>News & sentiment</strong><small>What is moving the conversation?</small></button><button class="module-card" data-message="TCS technical score is 78/100 with positive momentum."><span>⌁</span><strong>Technical lab</strong><small>RSI, MACD and trend signals</small></button><button class="module-card" data-message="Your demo portfolio health is 74/100 with moderate risk."><span>◒</span><strong>Risk dashboard</strong><small>Volatility and concentration</small></button><button class="module-card" data-message="AI score changes are monitored for your watchlist."><span>!</span><strong>Smart alerts</strong><small>Signals beyond price alerts</small></button><button class="module-card" data-message="Compare TCS, INFY and HDFCBANK across AI score and risk."><span>⇄</span><strong>Compare stocks</strong><small>Find the differences that matter</small></button><button class="module-card" data-message="Start with RSI, P/E and diversification in Learning mode."><span>✦</span><strong>Learning mode</strong><small>Understand the market simply</small></button></div><div id="module-message" class="module-message" aria-live="polite"></div></section>
+    <section class="disclaimer">AI MarketLens provides educational information for decision support only. It is not financial advice and does not guarantee returns.</section>
+    <dialog id="stock-dialog"><button class="dialog-close" aria-label="Close">×</button><span class="eyebrow">AI STOCK ANALYSIS</span><h2 id="dialog-title">Stock analysis</h2><div class="dialog-score"><strong id="dialog-score">--</strong><span>AI ANALYSIS SCORE</span></div><p id="dialog-explanation"></p><div id="dialog-factors" class="factor-list"></div></dialog>
+    <nav class="bottom-nav"><button class="active" data-target="top"><span>⌂</span>Home</button><button data-target="explore"><span>⌁</span>Markets</button><button data-target="stocks"><span>☆</span>Watchlist</button><button data-target="explore"><span>◒</span>Portfolio</button><button data-target="explore"><span>✦</span>AI</button></nav>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
